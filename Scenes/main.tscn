@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4to6mqdv2578"]
+
+[ext_resource type="PackedScene" uid="uid://duilsf42cdbtk" path="res://Scenes/enemy.tscn" id="1_gyl8q"]
+[ext_resource type="PackedScene" uid="uid://dte471n4tdj7h" path="res://Scenes/player.tscn" id="2_ovu31"]
+[ext_resource type="PackedScene" uid="uid://cfr3ks8o7evtw" path="res://Scenes/UI/player_health_bar.tscn" id="3_ytl6p"]
+[ext_resource type="PackedScene" uid="uid://g42igcmexjl1" path="res://Scenes/UI/enemy_health_bar.tscn" id="4_hugto"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource("1_gyl8q")]
+position = Vector2(45, 51)
+
+[node name="Player" parent="." instance=ExtResource("2_ovu31")]
+position = Vector2(45, 109)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="PlayerHealthBar" parent="UI" instance=ExtResource("3_ytl6p")]
+layout_mode = 0
+offset_top = 153.0
+offset_bottom = 159.0
+
+[node name="EnemyHealthBar" parent="UI" instance=ExtResource("4_hugto")]
+layout_mode = 0
+offset_top = 1.0
+offset_bottom = 7.0

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://g42igcmexjl1"]
+
+[ext_resource type="PackedScene" uid="uid://db2taga3pclan" path="res://Scenes/UI/health_bar.tscn" id="1_hr57d"]
+[ext_resource type="Script" path="res://Scenes/UI/enemy_health_bar.gd" id="2_jct0t"]
+
+[node name="EnemyHealthBar" instance=ExtResource("1_hr57d")]
+script = ExtResource("2_jct0t")
